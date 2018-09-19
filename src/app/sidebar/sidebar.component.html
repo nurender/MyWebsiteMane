@@ -1,0 +1,26 @@
+<div id="mySidenav" class="sidenav nav1">
+    <a href="javascript:void(0)" class="closebtn" (click)="closeNav()">&times;</a>
+    <input type="text" id="myInput" (keyup)="myFunction()" placeholder="Search for names.." title="Type in a name">
+    <ul id="myUL" *ngFor = "let html of posts">
+        <!-- <li><a [(routerLink)]="link">{{link}}</a></li -->
+        <li><a [routerLink] = "[html.id]" (click) = "Nurender($event)" >{{ html.id }}</a></li>
+        <!-- <li><a >Billy</a></li>
+        <li><a >Bob</a></li>
+        <li><a >Calvin</a></li>
+        <li><a >Christina</a></li>
+        <li><a >Cindy</a></li>
+        <li><a >Calvin</a></li>
+        <li><a >Christina</a></li>
+        <li><a >Cindy</a></li>
+        <li><a >Calvin</a></li>
+        <li><a >Christina</a></li>
+        <li><a >Cindy</a></li>
+        <li><a >Calvin</a></li>
+        <li><a >Christina</a></li>
+        <li><a >Cindy</a></li> -->
+      </ul>
+  </div> 
+  <div id="main">
+      <span style="font-size:30px;cursor:pointer" class="mainstyle" (click)="openNav()">&#9776; open</span>
+    </div>
+    

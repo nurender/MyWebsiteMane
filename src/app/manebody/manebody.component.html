@@ -1,0 +1,14 @@
+<div class="body">
+  <app-sidebar (childdata)="childdatarec=$event"></app-sidebar>
+<div class="sidebar" >
+</div>
+<div class="leftbar">
+  <div class="leftbar-body" >
+    <app-body [parentdata] = "childdatarec"></app-body>
+    
+  </div>
+  <div class="leftbar-header">
+    <h1>Nurender</h1>
+    <h1>{{childdatarec}}</h1>
+  </div>
+</div>
