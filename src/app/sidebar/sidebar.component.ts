@@ -1,4 +1,7 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+// import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { ServicesService } from '../services.service'
+
 
 @Component({
   selector: 'app-sidebar',
@@ -7,26 +10,38 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 })
 export class SidebarComponent implements OnInit {
 
-  public childdatarec;
+  array: any;
+  constructor( private services : ServicesService){}
 
-  @Output() public childdata = new EventEmitter();
 
-  Nurender(event){
-    console.log(event.target.text);
-    this.childdata.emit(event.target.text);
-  }
+  // mydata(id){
+  //   console.log("hello" +id);
+    
+  // }
 
-  posts=[]
-  constructor() {
-    fetch("http://jsonplaceholder.typicode.com/posts")
-    .then((res) => res.json())
-    .then((data) => this.posts = data)
-    .catch((err) => console.log(err))
-   }
+
+//   public childdatarec;
+
+  // @Output() public childdata = new EventEmitter();
+
+  // Nurender(event){
+  //   console.log(event.target.text);
+  //   this.childdata.emit(event.target.text);
+  // }
+
+//   posts=[]
+//   constructor() {
+//     fetch("http://jsonplaceholder.typicode.com/posts")
+//     .then((res) => res.json())
+//     .then((data) => this.posts = data)
+//     .catch((err) => console.log(err))
+//    }
    
 
 
   ngOnInit() {
+
+    this.array = this.services.customerTableData;
   }
   
  openNav() {

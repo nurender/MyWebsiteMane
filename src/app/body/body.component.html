@@ -1,6 +1,17 @@
-<div class="blog-post">
+<!-- <div class="blog-post" style="background-color:brown">
   <h2 class="blog-post-title"><a> {{ post.title }} </a></h2>
   <p> {{ post.body }} </p>
 </div>  
-<h1>{{parentdata}}</h1>
+<h1>{{parentdata}}</h1> -->
 <h1>Nurender</h1>
+<h1>{{Services.id}}</h1>
+<h1>{{array}}</h1>
+
+<ul id="myUL" *ngFor = "let r of array">
+  <!-- <li><a [(routerLink)]="link">{{link}}</a></li -->
+
+      
+  <li><a>{{r.name}}</a></li>
+
+
+</ul>

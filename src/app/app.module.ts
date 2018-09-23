@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
+import { ServicesService } from './services.service'
 
 import { AppComponent } from './app.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
@@ -22,13 +23,17 @@ let router : Routes = [
   }, 
   {
     path : 'html',
-    component : ManebodyComponent
+    component : ManebodyComponent,
   },
-  {
-    path : "html/:id",
-    component : ManebodyComponent
-  },
-  {
+  // {
+  //   path : "html/:id",
+  //   component : ManebodyComponent
+  // },
+  // {
+  //   path : "html/:id",
+  //   component : BodyComponent
+  // },
+  { 
     path : 'css',
     component : ManebodyComponent
   },
@@ -72,7 +77,7 @@ let router : Routes = [
     HttpClientModule,
     RouterModule.forRoot(router)
   ],
-  providers: [],
+  providers: [ServicesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
