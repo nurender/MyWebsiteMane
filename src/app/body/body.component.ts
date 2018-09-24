@@ -14,6 +14,13 @@ export class BodyComponent implements OnInit {
       this.array = this.Services.customerTableData;
     }
     
+    selectedTopic;
+    this.Services.topicId.subscribe(data => {
+      this.selectedTopic = data;
+      console.log(this.selectedTopic);
+    }); 
+
+
     // array: any;
     id;
 

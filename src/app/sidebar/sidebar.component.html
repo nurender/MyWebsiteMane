@@ -5,8 +5,12 @@
         <!-- <li><a [(routerLink)]="link">{{link}}</a></li -->
 
             
-        <li><a (click) = "mydata(r.id)" (click) = "services.id = r.id">{{r.name}}</a></li>
-
+      <li>
+        <a (click) = "mydata(r.id)" (click) = "services.id = r.id">{{r.name}}</a>
+      </li>
+      <li>
+        <a (click) = "selectTopic(r.id)" >{{r.name}}</a>
+      </li>
 
       </ul>
   </div> 

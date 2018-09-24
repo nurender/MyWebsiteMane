@@ -22,6 +22,10 @@ export class ServicesService {
     this.data.next(true);
   }
 
+  public topicId: BehaviorSubject<any> = new BehaviorSubject([]);
+  setTopic(id){
+     this.topicId.next([id]);
+  }
   customerTableData = [
     {
       "id" : 1,

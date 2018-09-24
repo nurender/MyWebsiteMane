@@ -20,6 +20,9 @@ export class SidebarComponent implements OnInit {
     
   }
 
+  selectTopic(id) {
+    this.services.setTopic(id);
+  }
 
 //   public childdatarec;
 
