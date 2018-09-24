@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 // import { ActivatedRoute } from '@angular/router';
 import { ServicesService } from '../services.service'
 
@@ -8,14 +8,16 @@ import { ServicesService } from '../services.service'
   styleUrls: ['./body.component.css']
 })
 export class BodyComponent implements OnInit {
-  
-    constructor( private Services : ServicesService){
 
+    array;
+    constructor( private Services : ServicesService){
+      this.array = this.Services.customerTableData;
     }
+    
     // array: any;
     id;
 
-  @Input() public parentdata;
+  // @Input() public parentdata;
   // id:number = 0;
   // post = {};
   // constructor(
@@ -33,7 +35,7 @@ export class BodyComponent implements OnInit {
     console.log(this.array);
     
   }
-  array = this.Services.customerTableData
+ 
   
 
 

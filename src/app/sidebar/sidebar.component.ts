@@ -11,13 +11,14 @@ import { ServicesService } from '../services.service'
 export class SidebarComponent implements OnInit {
 
   array: any;
-  constructor( private services : ServicesService){}
+  constructor( private services : ServicesService){
+    this.array = this.services.customerTableData;
+  }
 
-
-  // mydata(id){
-  //   console.log("hello" +id);
+  mydata(id){
+    console.log("hello" +id);
     
-  // }
+  }
 
 
 //   public childdatarec;
@@ -41,7 +42,7 @@ export class SidebarComponent implements OnInit {
 
   ngOnInit() {
 
-    this.array = this.services.customerTableData;
+    
   }
   
  openNav() {
